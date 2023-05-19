@@ -1,0 +1,184 @@
+<!-- <html>
+  <body>
+    
+<div id="app" [dir]="getDirection()">
+  
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+
+    <a href="#" class="navbar-brand" >FRS</a>
+    <ul class="navbar-nav mr-auto" routerLinkActive="active" >
+      <li class="nav-item">
+        <a href="/home" class="nav-link" routerLink="home">{{ 'Home' | translate }} </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link"  *ngIf="isLoggedIn" routerLink="listClient">{{ 'Clients list' | translate }} </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="isLoggedIn" routerLink="listProduit">{{ 'Products list' | translate }} </a>
+      </li>
+     
+      <li class="nav-item">
+        <a class="nav-link"  *ngIf="isLoggedIn" routerLink="listTransaction">{{ 'Transactions list' | translate }} </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"  *ngIf="isLoggedIn" routerLink="Dashboard">{{'Dashboard'| translate}} </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="isLoggedIn" routerLink="Review">Review </a>
+      </li>
+      
+      
+      <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+      </li>
+      <li class="nav-item" *ngIf="showModeratorBoard">
+        <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+      </li>
+      
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="/register" class="nav-link" routerLink="register" >{{ 'Sign in' | translate }}</a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link" routerLink="login">{{ 'Login' | translate }}</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">{{ 'LogOut' | translate }}</a>
+      
+      </li>
+     
+    </ul>
+    <div class="btn-group btn-group-sm py-5">
+     
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('en-US')" [class.active]="!translateService.currentLang || translateService.currentLang === 'en-US'">Anglais</button>
+
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('fr-FR')" [class.active]="translateService.currentLang === 'fr-FR'">Français</button>
+
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('ar-AR')" [class.active]="translateService.currentLang === 'ar-AR'">عربي</button>
+
+    </div>
+  
+
+  </nav>
+
+  
+  
+
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+</body>
+</html> -->
+
+<html>
+  <body>
+    <div id="app" [dir]="getDirection()">
+    
+      <div class="navigation">
+        <ul> 
+          <li>
+            <a >
+              <img class="logo"  src="../../assets/image/frslogo.png" alt="FRS Logo"/>
+              <!-- <span class="title">FRS</span> -->
+              
+            </a>
+          </li>
+          
+          <li>
+            <a *ngIf="isLoggedIn" routerLink="home">
+              <span class="icon"><i class="fas fa-home"  style="color: rgb(138, 135, 135);font-size: 20px;" ></i></span>
+              <span class="title">{{ 'Home' | translate }}</span>
+              
+            </a>
+          </li>
+          <li>
+            <a  *ngIf="isLoggedIn" routerLink="Dashboard">
+              <span class="icon"><i class="fas fa-chart-bar" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{'Dashboard'| translate}}</span>
+              
+            </a>
+          </li>
+         
+
+          <li>
+            <a *ngIf="isLoggedIn" routerLink="listClient">
+              <span class="icon"><i class="fas fa-users"  style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{ 'Client list' | translate }}</span>
+              
+            </a>
+          </li>
+          <li>
+            <a *ngIf="isLoggedIn" routerLink="listProduit">
+              <span class="icon"><i class="fas fa-laptop-code" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{ 'Product list' | translate }}</span>
+              
+            </a>
+          </li>
+          <li>
+            <a *ngIf="isLoggedIn" routerLink="listTransaction">
+              <span class="icon"><i class="fas fa-exchange-alt" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{ 'Transaction list' | translate }}</span>
+              
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a *ngIf="isLoggedIn" routerLink="logout">
+              <span class="icon"><i class="fas fa-sign-out-alt" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+              <span class="title">{{ 'Log Out' | translate }}</span>
+              
+            </a>
+          </li>
+          
+            <li>
+              <a *ngIf="!isLoggedIn" routerLink="login">
+                <span class="icon"><i class="fa-solid fa-right-to-bracket" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+                <span class="title">{{ 'Log In' | translate }}</span>
+                
+              </a>
+            </li>
+            <li>
+              <a *ngIf="!isLoggedIn" routerLink="register">
+                <span class="icon"><i class="fa-solid fa-user-plus" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
+                <span class="title">{{ 'Sign Up' | translate }}</span>
+                
+              </a>
+            </li>
+          
+         
+         
+        </ul>
+      </div>
+
+      <script>
+      let list = document.querySelectorAll('.navigation li');
+      function activeLink(){
+        list.forEach((item)=>
+        item.classList.remove('hovered'));
+        this.classList.add('hovered');
+      }
+      list.forEach((item)=>
+      item.addEventListener('mouseover',activeLink));
+     </script>
+     
+     <div class="container">
+      <router-outlet></router-outlet>
+     </div>
+    </div>
+  </body>
+ 
+</html>
