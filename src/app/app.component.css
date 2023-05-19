@@ -118,6 +118,12 @@ body{
 
 }
 
+.btn-group {
+  width: 10%;
+  margin-left: 1%;
+  position: absolute;
+}
+
 
 
   

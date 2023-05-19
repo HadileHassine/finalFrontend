@@ -178,7 +178,18 @@
      <div class="container">
       <router-outlet></router-outlet>
      </div>
+     <div class="btn-group btn-group-sm py-5">
+     
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('en-US')" [class.active]="!translateService.currentLang || translateService.currentLang === 'en-US'">Anglais</button>
+
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('fr-FR')" [class.active]="translateService.currentLang === 'fr-FR'">Français</button>
+
+      <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('ar-AR')" [class.active]="translateService.currentLang === 'ar-AR'">عربي</button>
+
     </div>
+    </div>
+
+
   </body>
  
 </html>
