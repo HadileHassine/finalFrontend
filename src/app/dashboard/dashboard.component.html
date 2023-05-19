@@ -1,5 +1,4 @@
-
-<html>
+ <div [dir]="getDirection()">
     <head>
         <title>Dashboard Example</title>
         
@@ -10,7 +9,7 @@
           <div class="card">
             <div  style="display: flex; align-items: center;">
               <div class="numbers">{{nbClient}}</div>
-              <div class="cardName" >Nombre Client</div>
+              <div class="cardName" >{{"Number of clients"| translate}}</div>
               <div class="iconBx">
               <i class="fas fa-users" style="font-size: 24px;margin-left: 100px; margin-top: -20px;"></i>
               </div>
@@ -19,7 +18,7 @@
           <div class="card">
             <div style="display: flex; align-items: center;">
               <div class="numbers">{{nbProduit}}</div>
-              <div class="cardName">Nombre Produit</div>
+              <div class="cardName">{{"Number of products"| translate}}</div>
               <div class="iconBx">
               <i class="fas fa-laptop-code" style="font-size: 24px;  margin-left: 100px; margin-top: -20px;"></i>
               </div>
@@ -29,7 +28,7 @@
           <div class="card">
             <div style="display: flex; align-items: center;">
               <div class="numbers">{{nbTransaction}}</div>
-              <div class="cardName">Nombre Transaction</div>
+              <div class="cardName">{{"Number of transactions"| translate}}</div>
               <div class="iconBx">
               <i class="fas fa-exchange-alt" style="font-size: 24px; margin-left: 60px;margin-top: -20px;"></i>
               </div>
@@ -39,7 +38,7 @@
           <div class="card">
             <div style="display: flex; align-items: center;">
               <div class="numbers">{{total}}</div>
-              <div class="cardName" >Montant Transaction</div>
+              <div class="cardName" >{{"Amount of transactions"| translate}}</div>
               <div class="iconBx">
               <i class="fa-solid fa-dollar-sign"  style="font-size: 26px;margin-top: -20px; "></i>
               </div>
@@ -52,8 +51,8 @@
         <br> 
         <div class="d-flex justify-content-between">
             <!-- <button class="btn btn-danger" (click)="getLastDay()">Get last Day</button> -->
-            <button (click)="getLastMonth()" class="btn btn-warning">Get last Month</button>
-            <button (click)="getLastYear()" class="btn btn-primary">Get last Year</button>
+            <button (click)="getLastMonth()" class="btn btn-warning">{{"Last month"| translate}}</button>
+            <button (click)="getLastYear()" class="btn btn-primary">{{"Last year"|translate}}</button>
         </div>
       </div>
       <div class="user">
@@ -67,4 +66,4 @@
        
 
     </body>
-    </html>
+  </div>

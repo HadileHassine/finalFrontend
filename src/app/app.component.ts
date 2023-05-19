@@ -13,6 +13,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   private roles: string[] = [];
   isLoggedIn = false;
   showAdminBoard = false;

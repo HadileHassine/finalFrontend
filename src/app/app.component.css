@@ -121,7 +121,8 @@ body{
 .btn-group {
   width: 10%;
   margin-left: 1%;
-  position: absolute;
+  margin-top: 250%;
+  
 }
 
 
