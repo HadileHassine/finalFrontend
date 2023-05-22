@@ -1,4 +1,5 @@
- <div [dir]="getDirection()">
+ 
+    <html>
     <head>
         <title>Dashboard Example</title>
         
@@ -55,15 +56,36 @@
             <button (click)="getLastYear()" class="btn btn-primary">{{"Last year"|translate}}</button>
         </div>
       </div>
-      <div class="user">
-        <img src="../../assets/image/img maha.jpg" alt="Profile Image" class="profile-image"/>
-      </div>
-      
-      
       
         <br>
+
+        <table class = "table table-striped">
+          <thead>
+              <tr>
+                  <th>Transaction Type</th>
+                  <th> Product</th>
+                  <th> Client </th>
+                  <th> Status </th>
+                 
+                  
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor = "let transaction of listAjout" >
+                  <td> {{ transaction.typeTransaction}} </td>
+                  <td> {{transaction.produit }} </td>
+                  <td> {{transaction.client}} </td>
+                  <td> {{ transaction.statutTransaction }} </td>
+                  
+                  
+                
+              </tr>
+          </tbody>
+      </table>
        
        
 
     </body>
-  </div>
+    </html>
+ 

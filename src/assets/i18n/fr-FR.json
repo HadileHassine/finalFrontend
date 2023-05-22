@@ -121,6 +121,12 @@
   "Forgot Password?":"Mot de passe oublié ?",
   "Don't have an account ?":"Vous n'avez pas de compte ?",
   "Go To Register":"Inscription",
-  "User Name":"Nom d'utilisateur"
+  "User Name":"Nom d'utilisateur",
+  "Logged in successfully!":"Connecté avec succès !",
+  "I agree to the terms & conditions":"J'accepte les termes et conditions",
+  "Sign up":"S'inscrire",
+  "Username is required!":"Nom d'utilisateur requis !",
+  "Password is required":"Mot de passe requis",
+  "Password must be at least 6 characters":"Le mot de passe doit contenir au moins 6 caractères."
 }
 

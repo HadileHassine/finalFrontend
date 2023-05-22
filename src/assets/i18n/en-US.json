@@ -122,7 +122,12 @@
   "Forgot Password?":"Forgot Password?",
   "Don't have an account ?":"Don't have an account ?",
   "Go To Register":"Go To Register",
-  "User Name":"User Name"
+  "User Name":"User Name",
+  "Logged in successfully!":"Logged in successfully!",
+  "I agree to the terms & conditions":"I agree to the terms & conditions",
+  "Sign up":"Sign up",
+  "Username is required!":"Username is required!",
+  "Password is required":"Password is required"
 
 
 }

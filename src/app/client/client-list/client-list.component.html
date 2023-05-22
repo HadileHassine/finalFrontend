@@ -55,11 +55,11 @@
         <!-- <td> {{ client.commentaire}} </td> -->
         
         <td class="exclude-from-pdf">
-            <button (click)="updateClient(client.id_Client)"class= "btn btn-success">{{ 'Update' | translate }}</button>
-            <button (click)="detailsClient(client.id_Client)" type="button" class="btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
-            <button (click)="selectedClientId = client.id_Client; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
-            
+            <i (click)="updateClient(client.id_Client)" class="fas fa-edit fa-lg text-success" title="{{ 'Update' | translate }}" style="cursor: pointer;"></i>
+            <i (click)="detailsClient(client.id_Client)" class="fas fa-eye fa-lg text-primary" title="{{ 'View' | translate }}" style="margin-left: 20px; margin-right: 20px ; cursor: pointer;"></i>
+            <i (click)="selectedClientId = client.id_Client; showDialog()" class="fas fa-trash-alt fa-lg text-danger" title="{{ 'Delete' | translate }}" style="cursor: pointer;"></i>
         </td>
+        
     </tr>
 </tbody>
 </table>

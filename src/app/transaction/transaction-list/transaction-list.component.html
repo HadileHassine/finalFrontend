@@ -61,10 +61,11 @@
             <td> {{ transaction.statutTransaction }} </td>
             <td> {{ transaction.date_ajout}} </td>
             <td class="exclude-from-pdf">
-                <button (click)="updateTransaction(transaction.id_Transaction)"class= "btn btn-success">{{ 'Update' | translate }}</button>
-                <button (click)="detailsTransaction(transaction.id_Transaction)"class = "btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
-                <button  (click)="selectedTransactionId = transaction.id_Transaction; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
+                    <i (click)="updateTransaction(transaction.id_Transaction)" class="fas fa-edit fa-lg text-success" title="{{ 'Update' | translate }}" style="cursor: pointer;"></i>
+                    <i (click)="detailsTransaction(transaction.id_Transaction)" class="fas fa-eye fa-lg text-primary" title="{{ 'View' | translate }}" style="margin-left: 20px; margin-right: 20px; cursor: pointer;"></i>
+                    <i (click)="selectedTransactionId = transaction.id_Transaction; showDialog()" class="fas fa-trash-alt fa-lg text-danger" title="{{ 'Delete' | translate }}" style="cursor: pointer;"></i>
             </td>
+           
         </tr>
     </tbody>
 </table>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TransactionService } from '../_services/transaction.service';
 import { DashboardService } from '../_services/dashboard.service';
 import Chart from 'chart.js/auto';
-import { TranslateService } from '@ngx-translate/core';
+import { Transaction } from 'ethers';
 
 
 
@@ -15,6 +15,7 @@ export class DashboardComponent {
   nbTransaction:any;
   nbProduit:any;
   nbClient:any;
+  listAjout:any;
   date:any;
   total:any;
   totalD:any;
@@ -26,8 +27,7 @@ export class DashboardComponent {
   
 
   
-  constructor(private dashboardService: DashboardService,
-    public translateService: TranslateService,){
+  constructor(private dashboardService: DashboardService){
 
   }
   ngOnInit(){
@@ -39,6 +39,7 @@ export class DashboardComponent {
     this.getTransactionLastDay();
     this.getTransactionLastMonth();
     this.getTransactionLastYear();
+    this. getDateAjout();
     // this.getChart()
 
      const canvas = document.getElementById('myChart') as HTMLCanvasElement;
@@ -107,6 +108,16 @@ export class DashboardComponent {
       });
       
       }
+
+      getDateAjout(){
+        this.dashboardService.getDateAjout().subscribe((nombre: number)=>{
+          this.listAjout=nombre;
+          
+          
+        });
+        
+      }
+    
 
     getNbClient(){
 
@@ -238,14 +249,6 @@ export class DashboardComponent {
        
       else {
         console.error('Could not get 2D context for canvas element.');
-      }
-    }
-
-    getDirection() {
-      if (this.translateService.currentLang === 'ar-AR') {
-        return 'rtl'; 
-      } else {
-        return 'ltr'; 
       }
     }
   }

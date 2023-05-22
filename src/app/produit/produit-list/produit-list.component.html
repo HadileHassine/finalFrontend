@@ -56,9 +56,9 @@
             
             
             <td class="exclude-from-pdf">
-                <button (click)="UpdateProduit(produit.id_Produit)" class = "btn btn-success">{{ 'Update' | translate }}</button>
-                <button class="my-button" (click)="detailsProduit(produit.id_Produit)"class = "btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
-                <button class="my-button" (click)="selectedProduitId =produit.id_Produit; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
+                <i (click)="UpdateProduit(produit.id_Produit)" class="fas fa-edit fa-lg text-success" title="{{ 'Update' | translate }}" style="cursor: pointer;"></i>
+                <i (click)="detailsProduit(produit.id_Produit)" class="fas fa-eye fa-lg text-primary" title="{{ 'View' | translate }}" style="margin-left: 20px; margin-right: 20px; cursor: pointer;"></i>
+                <i (click)="selectedProduitId = produit.id_Produit; showDialog()" class="fas fa-trash-alt fa-lg text-danger" title="{{ 'Delete' | translate }}" style="cursor: pointer;"></i>
             </td>
         </tr>
     </tbody>

@@ -85,6 +85,9 @@
 </html> -->
 
 <html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
   <body>
     <div id="app" [dir]="getDirection()">
     
@@ -137,7 +140,7 @@
           </li>
          
           <li class="nav-item">
-            <a href *ngIf="isLoggedIn" routerLink="login" class="nav-link" (click)="logout()">
+            <a  *ngIf="isLoggedIn" routerLink="login" class="nav-link" (click)="logout()" >
               <span class="icon"><i class="fas fa-sign-out-alt" style="color: rgb(138, 135, 135);font-size: 20px;"></i></span>
               <span class="title">{{ 'Log Out' | translate }}</span>
               
@@ -163,15 +166,29 @@
          
         </ul>
 
-        <div class="btn-group btn-group-sm py-5">
-     
-          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('en-US')" [class.active]="!translateService.currentLang || translateService.currentLang === 'en-US'">Anglais</button>
-    
-          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('fr-FR')" [class.active]="translateService.currentLang === 'fr-FR'">Français</button>
-    
-          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('ar-AR')" [class.active]="translateService.currentLang === 'ar-AR'">عربي</button>
-    
+       
+        <div class="btn-group btn-group-sm py-5 " style="top: 20%; left: 2%; " >
+          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('en-US')" >
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197374.png" alt="Anglais" style="width: 30px; height: 30px;">
+            English
+          </button>
+        
+          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('fr-FR')">
+            <img src="https://cdn-icons-png.flaticon.com/512/323/323315.png" alt="Français" style="width: 30px; height: 30px;">
+            French
+          </button>
+        
+          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="changeLanguage('ar-AR')" >
+            <img src="https://cdn-icons-png.flaticon.com/512/197/197624.png?w=740&t=st=1684751491~exp=1684752091~hmac=822dd9f9087ee576a54fbbfcad7b66cf0ba7cbe07c902ec6419809c75da5805e" alt="عربي" style="width: 30px; height: 30px;">
+            Arabic
+          </button>
         </div>
+      
+      
+     
+      
+      
+      
       </div>
 
       <script>
