@@ -116,6 +116,11 @@
   "Date added:":"Date d'ajout:",
   "Log Out":"Déconnecter",
   "Log In":"Se connecter",
-  "Sign Up":"S'inscrire"
+  "Sign Up":"S'inscrire",
+  "Remember me":"Souviens-toi de moi",
+  "Forgot Password?":"Mot de passe oublié ?",
+  "Don't have an account ?":"Vous n'avez pas de compte ?",
+  "Go To Register":"Inscription",
+  "User Name":"Nom d'utilisateur"
 }
 

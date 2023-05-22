@@ -116,6 +116,11 @@
   "Date added:":"تاريخ الإضافة:",
   "Log Out":"تسجيل الخروج",
   "Log In":"تسجيل الدخول",
-  "Sign Up":"تسجيل"
+  "Sign Up":"تسجيل",
+  "Remember me":"تذكرني",
+  "Forgot Password?":"نسيت كلمة المرور؟",
+  "Don't have an account ?":"ليس لديك حساب؟",
+  "Go To Register":"تَسْجِيلٌ ",
+  "User Name":"اسم المستخدم"
 
 }

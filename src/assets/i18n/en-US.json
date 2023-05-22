@@ -117,7 +117,12 @@
   "Date added:":"Date added:",
   "Log Out":"Log Out",
   "Log In":"Log In",
-  "Sign Up":"Sign Up"
+  "Sign Up":"Sign Up",
+  "Remember me":"Remember me",
+  "Forgot Password?":"Forgot Password?",
+  "Don't have an account ?":"Don't have an account ?",
+  "Go To Register":"Go To Register",
+  "User Name":"User Name"
 
 
 }

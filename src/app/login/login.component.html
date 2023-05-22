@@ -3,21 +3,9 @@
 </head>
 
 <div class="container">
-  <!-- <div class="image_fond">
-    <img  src="https://cdn-icons-png.flaticon.com/512/1179/1179406.png?w=740&t=st=1683126088~exp=1683126688~hmac=8b2ca277d0a4f5f51a5346a2f2b553f1086c5bdafe3b32e263630f6a2ddb91cf" alt="error">
-  </div> -->
-
-<div class="all-card">
-<h3 class="h3"> {{'Welcome to FRS'| translate}}</h3>
-<h1 class="h1"  > {{'Login for making the right decision'| translate}}</h1>
-
-
-<div class="col-md-12">
+  <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
   
-  <!-- <div class="card card-container"> -->
-    <img id="profile-img" src="https://cdn-icons-png.flaticon.com/512/1179/1179406.png?w=740&t=st=1683126088~exp=1683126688~hmac=8b2ca277d0a4f5f51a5346a2f2b553f1086c5bdafe3b32e263630f6a2ddb91cf"  class="profile-img-card" />
-
-   
+ 
     <form
       *ngIf="!isLoggedIn"
       name="form"
@@ -25,15 +13,14 @@
       #f="ngForm"
       novalidate
     >
-    <br>
+   
       <div class="form-group">
-        <label class="label" for="username">{{ 'Username' | translate }}</label>
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
-              <i class="fa fa-user"></i>
-            </span>
-          </div>
+        <h2>{{'Login'| translate}}</h2>
+        <div class="input-box">
+            <span class="icon"></span>
+            <span class="icon"><i class="fas fa-user" ></i></span>
+            
+          
           <input
             type="text"
             class="form-control"
@@ -43,23 +30,21 @@
             #username="ngModel"
             [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
           />
+          <span class="title">{{ 'User Name' | translate }}</span>
           <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
             {{'Username is required!'| translate}}
           </div>
         </div>
       </div>
-     <br> 
-      <div class="form-group">
-        <label class="label" for="password">{{ 'Password' | translate }}</label>
-        <div class="input-group">
-          <div class="input-group-prepend1">
-            <span class="input-group-text">
-              <i class="fas fa-lock"></i>
-            </span>
-          </div>
-          
+ 
+        
+        <div class="input-box">
+          <span class="icon"></span>
+          <span class="icon"><i class="fa-sharp fa-solid fa-lock"></i></span>
+        
           <input  type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
-        </div>
+          <span class="title">{{ 'Password' | translate }}</span>
+        
         <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
           <div *ngIf="password.errors['required']">{{'Password is required'| translate}}</div>
           <div *ngIf="password.errors['minlength']">
@@ -67,13 +52,18 @@
             </div>
           </div>
         </div>
-      <br>
+        <div class="remembre-forgot">
+          <label><input type="checkbox">{{'Remember me'| translate}} </label>
+          <a href="#"> {{'Forgot Password?'|translate}} </a>
+        </div>
+    
       <div class="form-group">
-        <button class="btn btn-primary btn-block">
+        <button class="btn">
           {{ 'Login' | translate }}
         </button>
-        <p class="inline-block">Don't have an account?</p>
-        <a href="/register" class="inline-block">Go to register page</a>
+      </div>
+      <div class="login-register">
+        <p>{{'Don\'t have an account ?'| translate}} <a href="/register" class="register-link">{{'Go To Register'| translate}} </a></p>
       </div>
       <div class="form-group">
         <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger" role="alert">
@@ -82,10 +72,8 @@
       </div>
     </form>
 
-    <!-- <div class="alert alert-success" >
+    <div class="alert alert-success" *ngIf="isLoggedIn">
       {{'Logged in as'| translate}} {{ roles }}.
-    </div> -->
+    </div>
   
-</div>
-</div>
 </div>
