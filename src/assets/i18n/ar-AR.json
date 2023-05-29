@@ -127,6 +127,7 @@
   "Sign up":"تسجيل",
   "Username is required!":"اسم المستخدم مطلوب!",
   "Password is required":"كلمة المرور مطلوبة",
-  "Password must be at least 6 characters":"يجب أن تتكون كلمة المرور من 6 أحرف على الأقل."
+  "Password must be at least 6 characters":"يجب أن تتكون كلمة المرور من 6 أحرف على الأقل.",
+  "Date added":"تاريخ الإضافة"
 
 }

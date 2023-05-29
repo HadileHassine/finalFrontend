@@ -127,7 +127,9 @@
   "I agree to the terms & conditions":"I agree to the terms & conditions",
   "Sign up":"Sign up",
   "Username is required!":"Username is required!",
-  "Password is required":"Password is required"
+  "Password is required":"Password is required",
+  "Password must be at least 6 characters":"Password must be at least 6 characters",
+  "Date added":"Date added"
 
 
 }

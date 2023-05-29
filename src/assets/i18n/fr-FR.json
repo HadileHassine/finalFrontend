@@ -127,6 +127,7 @@
   "Sign up":"S'inscrire",
   "Username is required!":"Nom d'utilisateur requis !",
   "Password is required":"Mot de passe requis",
-  "Password must be at least 6 characters":"Le mot de passe doit contenir au moins 6 caractères."
+  "Password must be at least 6 characters":"Le mot de passe doit contenir au moins 6 caractères.",
+  "Date added":"Date d'ajout"
 }
 
