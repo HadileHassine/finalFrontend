@@ -12,6 +12,7 @@ export class Client {
     commentaire: any;
     salutation: any;
     type: any;
+    pays: any
     
     
 }

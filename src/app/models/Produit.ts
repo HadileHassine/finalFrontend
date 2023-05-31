@@ -5,5 +5,6 @@ export class Produit {
     description: any;
     prix: any ;
     code_produit: any;
+    date_creation: any;
    
   }
