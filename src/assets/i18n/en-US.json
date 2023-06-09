@@ -129,7 +129,19 @@
   "Username is required!":"Username is required!",
   "Password is required":"Password is required",
   "Password must be at least 6 characters":"Password must be at least 6 characters",
-  "Date added":"Date added"
+  "Date added":"Date added",
+  "This will delete this product permanently, You cannot undo this action.":"This will delete this product permanently, You cannot undo this action.",
+  "This will delete this client permanently, You cannot undo this action.":"This will delete this client permanently, You cannot undo this action.",
+  "This will delete this transaction permanently, You cannot undo this action.":"This will delete this transaction permanently, You cannot undo this action.",
+  "Cancel":"Cancel",
+  "Country:":"Country:",
+  "Country":"Country",
+  "Salutation:":"Salutation:",
+  "paid":"paid",
+  "refunded":"refunded",
+  "Status":"Status",
+  "Last 5 transactions":"Last 5 transactions",
+  "Add Transaction":"Add Transaction"
 
 
 }

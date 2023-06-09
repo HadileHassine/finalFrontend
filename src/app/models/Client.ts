@@ -13,7 +13,6 @@ export class Client {
     salutation: any;
     type: any;
     pays: any
-    
-    
+       
 }
 

@@ -113,7 +113,7 @@ navigateToCreateTransactionInterface(){
 
     pdf.setFontSize(25);
     pdf.setTextColor(0, 0, 139);
-    pdf.text('Transaction Report',200,60);
+    pdf.text('Rapport de transactions',200,60);
     pdf.setTextColor(0, 0, 0);
     pdf.setLineWidth(1);
     pdf.line(10, 120, 580, 120); 

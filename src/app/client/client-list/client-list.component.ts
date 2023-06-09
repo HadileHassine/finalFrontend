@@ -104,7 +104,7 @@ navigateToCreateClientInterface(){
 
     pdf.setFontSize(25);
     pdf.setTextColor(0, 0, 139);
-    pdf.text('Client Report',200,60);
+    pdf.text('Rapport de clients',200,60);
     pdf.setTextColor(0, 0, 0);
     pdf.setLineWidth(1);
     pdf.line(10, 120, 580, 120); 
