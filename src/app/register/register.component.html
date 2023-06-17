@@ -3,9 +3,9 @@
 </head>
 
 <div class="container">
-
   <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
-   
+  
+ 
     <form
       *ngIf="!isSuccessful"
       name="form"
@@ -13,29 +13,30 @@
       #f="ngForm"
       novalidate
     >
-
-     <div class="form-group">
-      <h2>{{'Sign up'| translate}}</h2>
-      <div class="input-box">
-        <span class="icon">
-          <i class="fa fa-user"></i>
-        </span>
-        <input
-        type="text"
-        class="form-control"
-        name="username"
-        [(ngModel)]="form.username"
-        required
-        #username="ngModel"
-        [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
-      />
-      <label class="title" for="username">{{ 'User Name' | translate }}</label>
-     
-        <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
-          {{'Username is required!'| translate}}
+   
+      <div class="form-group">
+        <h2>{{'Sign up'| translate}}</h2>
+        <div class="input-box">
+            <span class="icon"></span>
+            <span class="icon"><i class="fas fa-user" ></i></span>
+            
+          
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            [(ngModel)]="form.username"
+            required
+            #username="ngModel"
+            [ngClass]="{ 'is-invalid': f.submitted && username.errors }"
+          />
+          <span class="title">{{ 'User Name' | translate }}</span>
+          <div *ngIf="username.errors && f.submitted" class="invalid-feedback">
+            {{'Username is required!'| translate}}
+          </div>
         </div>
       </div>
-    
+
       <div class="input-box">
         <span class="icon"><i class="fas fa-envelope"></i></span>
         <input
@@ -58,37 +59,36 @@
           </div>
         </div>
       </div>
-     
-      <div class="input-box">
-        <span class="icon">
-          <i class="fas fa-lock"></i>
-        </span>
-        <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
-
-        <label class="title" for="password">{{ 'Password' | translate }}</label>   
-          <div class="invalid-feedback" *ngIf="password.errors && f.submitted">
-            <div *ngIf="password.errors['required']">{{'Password is required'| translate}}</div>
-            <div *ngIf="password.errors['minlength']">
-              {{'Password must be at least 6 characters'| translate}}
+ 
+        
+        <div class="input-box">
+          <span class="icon"></span>
+          <span class="icon"><i class="fa-sharp fa-solid fa-lock"></i></span>
+        
+          <input  type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.errors }" />
+          <span class="title">{{ 'Password' | translate }}</span>
+        
+        <div *ngIf="password.errors && f.submitted" class="invalid-feedback">
+          <div *ngIf="password.errors['required']">{{'Password is required'| translate}}</div>
+          <div *ngIf="password.errors['minlength']">
+            {{'Password must be at least 6 characters'| translate}}
             </div>
           </div>
-        
-        
+        </div>
+      
+    
+      <div class="form-group">
+        <label><input type="checkbox">{{'I agree to the terms & conditions'| translate}}</label>
+        <button class="btn">
+          {{ 'Sign up' | translate }}
+        </button>
       </div>
       
-      <div class="remembre-forgot">
-        <label><input type="checkbox">{{'I agree to the terms & conditions'| translate}}</label>
-        <button class="btn">{{ 'Sign up' | translate }}</button>
-      </div>
+     
+    </form>
 
-
-    
-
-      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
-        {{'Signup failed!'| translate}}<br />{{ errorMessage }}
-      </div>
-   
     <div class="alert alert-success" *ngIf="isSuccessful">
-      {{'Your registration is successful!'| translate}}
+      {{'Your registration is successfully!'| translate}} 
     </div>
+  
 </div>
